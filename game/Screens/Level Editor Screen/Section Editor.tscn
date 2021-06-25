@@ -1,0 +1,163 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Screens/Level Editor Screen/Section Tree.gd" type="Script" id=1]
+[ext_resource path="res://Assets/UI Elements/Buttons/add.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Fonts/Titillium-Regular.otf" type="DynamicFontData" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 3 )
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( 132.906, 16 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+anchor_right = 1.0
+margin_top = 10.0
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="HBoxContainer"]
+margin_left = 277.0
+margin_right = 327.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 50, 50 )
+color = Color( 0.541176, 0.541176, 0.541176, 1 )
+
+[node name="NumberEasyLabel" type="Label" parent="HBoxContainer/ColorRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 1 )
+text = "00"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect2" type="ColorRect" parent="HBoxContainer"]
+margin_left = 331.0
+margin_right = 431.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 100, 0 )
+color = Color( 0.541176, 0.541176, 0.541176, 1 )
+
+[node name="EasyLabel" type="Label" parent="HBoxContainer/ColorRect2"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 1 )
+text = "Easy"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": true,
+"_editor_description_": ""
+}
+
+[node name="ColorRect3" type="ColorRect" parent="HBoxContainer"]
+margin_left = 435.0
+margin_right = 485.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 50, 50 )
+color = Color( 0.541176, 0.541176, 0.541176, 1 )
+
+[node name="NumberMediumLabel" type="Label" parent="HBoxContainer/ColorRect3"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 1 )
+text = "00"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="ColorRect4" type="ColorRect" parent="HBoxContainer"]
+margin_left = 489.0
+margin_right = 589.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 100, 0 )
+color = Color( 0.541176, 0.541176, 0.541176, 1 )
+
+[node name="MediumLabel" type="Label" parent="HBoxContainer/ColorRect4"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 1 )
+text = "Medium"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": true,
+"_editor_description_": ""
+}
+
+[node name="ColorRect5" type="ColorRect" parent="HBoxContainer"]
+margin_left = 593.0
+margin_right = 643.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 50, 50 )
+color = Color( 0.541176, 0.541176, 0.541176, 1 )
+
+[node name="NumberHardLabel" type="Label" parent="HBoxContainer/ColorRect5"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 1 )
+text = "00"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="ColorRect6" type="ColorRect" parent="HBoxContainer"]
+margin_left = 647.0
+margin_right = 747.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 100, 0 )
+color = Color( 0.541176, 0.541176, 0.541176, 1 )
+
+[node name="HardLabel" type="Label" parent="HBoxContainer/ColorRect6"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 1 )
+text = "Hard"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": true,
+"_editor_description_": ""
+}
+
+[node name="Add Question Button" type="Button" parent="."]
+margin_left = 16.0
+margin_right = 92.0
+hint_tooltip = "Add Question"
+focus_mode = 0
+enabled_focus_mode = 0
+icon = ExtResource( 2 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tree" type="Tree" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 70.0
+custom_constants/vseparation = 5
+columns = 3
+hide_root = true
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HTTPRequest" type="HTTPRequest" parent="."]
+[connection signal="pressed" from="Add Question Button" to="Tree" method="_on_Add_Question_Button_pressed"]
+[connection signal="button_pressed" from="Tree" to="Tree" method="_on_Tree_button_pressed"]

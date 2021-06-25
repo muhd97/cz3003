@@ -1,0 +1,71 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Screens/Play Screens/Typing Game/Alien.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Screens/Play Screens/Typing Game/Generate Collision Border.gd" type="Script" id=2]
+[ext_resource path="res://Screens/Play Screens/Typing Game/Controller.gd" type="Script" id=3]
+[ext_resource path="res://Assets/Fonts/Titillium-Regular.otf" type="DynamicFontData" id=4]
+[ext_resource path="res://Assets/Sprites/background.png" type="Texture" id=5]
+
+[sub_resource type="PhysicsMaterial" id=1]
+friction = 0.0
+bounce = 1.0
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 712.054, 10 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 48
+font_data = ExtResource( 4 )
+
+[node name="Controller" type="Node2D"]
+script = ExtResource( 3 )
+mob_scene = ExtResource( 1 )
+
+[node name="Background" type="Sprite" parent="."]
+position = Vector2( 272, 264 )
+texture = ExtResource( 5 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 544, 527 )
+
+[node name="Walls" type="StaticBody2D" parent="."]
+physics_material_override = SubResource( 1 )
+script = ExtResource( 2 )
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 304.051, 584.232 )
+shape = SubResource( 2 )
+
+[node name="AnswerLabel" type="Label" parent="."]
+margin_left = 180.964
+margin_top = 276.208
+margin_right = 379.964
+margin_bottom = 361.208
+custom_fonts/font = SubResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CorrectOrWrongLabel" type="Label" parent="."]
+margin_left = 180.735
+margin_top = 174.759
+margin_right = 379.735
+margin_bottom = 259.759
+custom_fonts/font = SubResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ExplanationLabel" type="Label" parent="."]
+margin_left = 26.9855
+margin_top = 412.724
+margin_right = 530.985
+margin_bottom = 511.724
+custom_fonts/font = SubResource( 3 )
+text = "Enter - Confirm answer
+Escape - Clear typed text"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]

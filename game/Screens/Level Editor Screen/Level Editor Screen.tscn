@@ -1,0 +1,190 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Assets/Fonts/Titillium-Regular.otf" type="DynamicFontData" id=1]
+[ext_resource path="res://Screens/Level Editor Screen/Save Data.gd" type="Script" id=2]
+[ext_resource path="res://Screens/Level Editor Screen/Section Editor.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Assets/UI Elements/Buttons/back.png" type="Texture" id=4]
+[ext_resource path="res://Assets/UI Elements/Buttons/widebutton.png" type="Texture" id=5]
+
+[sub_resource type="DynamicFont" id=1]
+size = 24
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 20
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 20
+outline_size = 2
+outline_color = Color( 0.0117647, 0.0117647, 0.0117647, 1 )
+font_data = ExtResource( 1 )
+
+[node name="HUD" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+margin_bottom = 100.0
+color = Color( 0.419608, 0.419608, 0.419608, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Top Menu" type="HBoxContainer" parent="ColorRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -1.5874
+margin_top = 1.5874
+margin_right = -1.5874
+margin_bottom = 1.5874
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+anchor_bottom = 1.0
+margin_top = 100.0
+margin_right = 200.0
+color = Color( 0.670588, 0.670588, 0.670588, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect2"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 10.0
+margin_top = 10.0
+margin_right = -10.0
+margin_bottom = -130.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NameLabel" type="Label" parent="ColorRect2/VBoxContainer"]
+margin_right = 180.0
+margin_bottom = 24.0
+custom_fonts/font = SubResource( 1 )
+text = "Name of Section"
+align = 1
+valign = 1
+
+[node name="Name" type="LineEdit" parent="ColorRect2/VBoxContainer"]
+margin_top = 28.0
+margin_right = 180.0
+margin_bottom = 58.0
+custom_fonts/font = SubResource( 2 )
+
+[node name="Control" type="Control" parent="ColorRect2/VBoxContainer"]
+margin_top = 62.0
+margin_right = 180.0
+margin_bottom = 72.0
+rect_min_size = Vector2( 0, 10 )
+
+[node name="DescriptionLabel" type="Label" parent="ColorRect2/VBoxContainer"]
+margin_top = 76.0
+margin_right = 180.0
+margin_bottom = 100.0
+custom_fonts/font = SubResource( 1 )
+text = "Description"
+align = 1
+valign = 1
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Description" type="TextEdit" parent="ColorRect2/VBoxContainer"]
+margin_top = 104.0
+margin_right = 180.0
+margin_bottom = 360.0
+size_flags_vertical = 3
+
+[node name="MessageLabel" type="Label" parent="ColorRect2"]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 15.0
+margin_top = -125.0
+margin_right = -15.0
+margin_bottom = -45.0
+custom_fonts/font = SubResource( 3 )
+align = 1
+autowrap = true
+clip_text = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Save Data" type="TextureButton" parent="ColorRect2"]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 36.0
+margin_top = -43.0
+margin_right = -41.0
+margin_bottom = -6.0
+texture_normal = ExtResource( 5 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="ColorRect2/Save Data"]
+margin_left = 20.0
+margin_top = 8.0
+margin_right = 105.0
+margin_bottom = 28.0
+custom_fonts/font = SubResource( 4 )
+text = "Save Data"
+align = 1
+
+[node name="ShareButton" type="TextureButton" parent="ColorRect2"]
+visible = false
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 36.0
+margin_top = -43.0
+margin_right = -41.0
+margin_bottom = -6.0
+texture_normal = ExtResource( 5 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="ColorRect2/ShareButton"]
+margin_left = 20.0
+margin_top = 8.0
+margin_right = 105.0
+margin_bottom = 28.0
+custom_fonts/font = SubResource( 4 )
+text = "FB Share"
+align = 1
+
+[node name="Section Editor" parent="." instance=ExtResource( 3 )]
+margin_left = 200.0
+margin_top = 100.0
+
+[node name="GoToPlayButton" type="TextureButton" parent="."]
+margin_left = 15.7134
+margin_top = 11.4126
+margin_right = 97.7134
+margin_bottom = 93.4126
+texture_normal = ExtResource( 4 )
+expand = true
+
+[node name="HTTPRequest" type="HTTPRequest" parent="."]
+[connection signal="pressed" from="ColorRect2/Save Data" to="." method="_on_Save_Data_pressed"]
+[connection signal="pressed" from="ColorRect2/ShareButton" to="." method="_on_ShareButton_pressed"]
+[connection signal="pressed" from="GoToPlayButton" to="." method="_on_GoToPlayButton_pressed"]
+[connection signal="request_completed" from="HTTPRequest" to="." method="_on_HTTPRequest_request_completed"]

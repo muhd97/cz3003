@@ -1,0 +1,240 @@
+{
+   "worlds":[
+      {
+         "name":"Puzzles",
+         "sections":[
+            {
+               "name":"Logic Warmups",
+               "by":"a1",
+               "description":"Sharpen your deduction skills with a variety of puzzles, ranging from basic reasoning up to some serious mind-benders."
+            },
+            {
+               "name":"Truth-Tellers and Liars",
+               "by":"a2",
+               "description":"Time to play detective! Every puzzle in this collection contains a set of statements, but it's up to you to figure out which of those statements are true and which of them are false."
+            },
+            {
+               "name":"Cryptograms",
+               "by":"a3",
+               "description":"Cryptograms are puzzles where some (or all) digits are missing from an arithmetic operation. Tinker with different combinations of numbers and letters to unlock the right answer."
+            },
+            {
+               "name":"Logical Reasoning",
+               "by":"a4",
+               "description":"How can you find a fake coin with a balance scale? How can you use math to pretend to read minds? Solve these puzzles and build your foundational logical reasoning skills."
+            },
+            {
+               "name":"Operator Search",
+               "by":"a5",
+               "description":"Fill in the missing operations to make a true equation."
+            },
+            {
+               "name":"Arithmetic Puzzles",
+               "by":"a6",
+               "description":"Arithmetic puzzles are Mad Libs for math: fill in the blanks with numbers or operations to make the equation true."
+            },
+            {
+               "name":"Grid Puzzles",
+               "by":"a7",
+               "description":"Logic puzzles can get complicated, and keeping track of information while you're sleuthing is no easy task. See how grids can help you efficiently deduce your way to the truth."
+            }
+         ],
+         "rankings":{
+            "player":{
+               "rank":4,
+               "score":4
+            },
+            "top_players":[
+               {
+                  "rank":1,
+                  "name":"Name1",
+                  "score":7
+               },
+               {
+                  "rank":2,
+                  "name":"Name2",
+                  "score":6
+               },
+               {
+                  "rank":3,
+                  "name":"Name3",
+                  "score":5
+               },
+               {
+                  "rank":4,
+                  "name":"Max",
+                  "score":4
+               },
+               {
+                  "rank":5,
+                  "name":"Name5",
+                  "score":3
+               },
+               {
+                  "rank":6,
+                  "name":"Name6",
+                  "score":2
+               },
+               {
+                  "rank":7,
+                  "name":"Name7",
+                  "score":1
+               },
+               {
+                  "rank":8,
+                  "name":"Name8",
+                  "score":1
+               },
+               {
+                  "rank":9,
+                  "name":"Name9",
+                  "score":1
+               },
+               {
+                  "rank":10,
+                  "name":"Name10",
+                  "score":1
+               },
+               {
+                  "rank":11,
+                  "name":"Name11",
+                  "score":1
+               },
+               {
+                  "rank":12,
+                  "name":"Name12",
+                  "score":1
+               }
+            ]
+         }
+      },
+      {
+         "name":"Games",
+         "sections":[
+            {
+               "name":"Deterministic Games",
+               "by":"b1",
+               "description":"Whether you’re just playing around or a master of games, see how mathematical and logical ideas can be combined to analyze games from tic-tac-toe to Nim."
+            },
+            {
+               "name":"Chess",
+               "by":"b2",
+               "description":"Chess is no joke: it has more possible sequences of moves than the number of atoms in the observable universe, but working through chess puzzles is a great way to gain insightful strategies."
+            },
+            {
+               "name":"Game Theory",
+               "by":"b3",
+               "description":"Why do prisoners turn on each other?  How can adding an extra road make traffic even worse?  Game theory provides a logical framework for answering these questions and understanding human decisions."
+            }
+         ],
+         "rankings":{
+            "player":{
+               "rank":5,
+               "score":13
+            },
+            "top_players":[
+               {
+                  "rank":1,
+                  "name":"Name1",
+                  "score":17
+               },
+               {
+                  "rank":2,
+                  "name":"Name2",
+                  "score":16
+               },
+               {
+                  "rank":3,
+                  "name":"Name3",
+                  "score":15
+               },
+               {
+                  "rank":4,
+                  "name":"Name4",
+                  "score":14
+               },
+               {
+                  "rank":5,
+                  "name":"Max",
+                  "score":13
+               },
+               {
+                  "rank":6,
+                  "name":"Name6",
+                  "score":12
+               },
+               {
+                  "rank":7,
+                  "name":"Name7",
+                  "score":11
+               }
+            ]
+         }
+      },
+      {
+         "name":"Paradoxes",
+         "sections":[
+            {
+               "name":"Paradoxes in Probability",
+               "by":"c1",
+               "description":"See the confluence of probability and logic by exploring these mind-bending paradoxes."
+            },
+            {
+               "name":"Infinitesimal Paradoxes",
+               "by":"c2",
+               "description":"If you walk halfway across a room, and then halfway across the rest, and halfway across the rest, and so on...will you ever get there? See how weird it gets when things get very, very small."
+            },
+            {
+               "name":"Math of Voting",
+               "by":"c3",
+               "description":"Just count the votes and see who has the most, right? Voting systems can actually be quite complex, and the puzzling mathematical paradoxes that arise from them may surprise you!"
+            }
+         ],
+         "rankings":{
+            "player":{
+
+            },
+            "top_players":[
+               {
+                  "rank":1,
+                  "name":"Name1",
+                  "score":17
+               },
+               {
+                  "rank":2,
+                  "name":"Name2",
+                  "score":16
+               },
+               {
+                  "rank":3,
+                  "name":"Name3",
+                  "score":15
+               },
+               {
+                  "rank":4,
+                  "name":"Name4",
+                  "score":14
+               }
+            ]
+         }
+      },
+      {
+         "name":"Propositional Logic",
+         "sections":[
+            {
+               "name":"Propositional Logic",
+               "by":"d1",
+               "description":"If you’re reading this sentence, then propositional logic is meant for you. It's time to demystify the art of formal logic!"
+            },
+            {
+               "name":"Syllogistic Logic",
+               "by":"d2",
+               "description":"Syllogisms are the original logic, going back to Aristotle. They still find prominence today in the form of Venn and Euler Diagrams."
+            }
+         ],
+         "rankings":{
+            
+         }
+      }
+   ]
+}

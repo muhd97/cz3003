@@ -1,0 +1,91 @@
+{
+   "numberEasy":4,
+   "numberMedium":2,
+   "numberHard":1,
+   "questions":[
+      {
+         "text":"Suppose you were visiting an island with knights, who always tell the truth, and knaves, who always lie.\nWhich statement is impossible for an islander to make?",
+         "difficulty":"E",
+         "answers":[
+            "Both",
+            "Knave",
+            "Knight",
+            "Neither"
+         ],
+         "correct":1,
+         "explanation":"A knight can make the statement 'I am a knight' and be telling the truth. A knave can make the statement 'I am a knight' and be lying.\nA knight can also make the statement 'I am either a knight or a knave' and still be telling the truth. A knave cannot make this statement, because he would be telling the truth, against their nature.\nA knight can't say 'I am a knave' because they would be lying, against their nature.\nA knave can't say 'I am a knave' because they would be telling the truth, against their nature."
+      },
+      {
+         "text":"Suppose you are in a dungeon with two doors. One of the doors has a treasure and the other has a terrible monster.\nThe doors have signs on them. You know the sign on a door either tells the truth or lies.\nFIRST DOOR: “Both doors are lying.”\nSECOND DOOR: “The treasure is in this room.”\nWhere is the treasure?",
+         "difficulty":"E",
+         "answers":[
+            "First",
+            "Second",
+            "Impossible",
+            "Filler"
+         ],
+         "correct":1,
+         "explanation":"Suppose the first door is telling the truth. However, the door states both doors are lying and immediately forms a contradiction. Therefore, the first door must be lying.\n\nIf the first door is lying, then it can't be the case both doors are lying. Therefore the second door must be truthful. So the treasure is behind the second door."
+      },
+      {
+         "text":"The next sentence is true.\nThe previous sentence is false.\n\nIs the first sentence true?",
+         "difficulty":"E",
+         "answers":[
+            "True",
+            "False",
+            "Impossible",
+            "Filler"
+         ],
+         "correct":2,
+         "explanation":"Suppose the first sentence is true. Then the second sentence is true. However, that sentence states the first sentence is false, so there is a contradiction.\n\nSuppose the first sentence is false. Then the second sentence is false. However, the second sentence truthfully states the first sentence is false, so there is another contradiction.\n\nSince the first sentence cannot be true or false, this forms a contradiction."
+      },
+      {
+         "text":"Suppose you are visiting an island with sknights and sknaves.\nSknights tell the truth on every day but Saturday, on which they always lie.\nSknaves lie on every day but Saturday, on which they always tell the truth.\nYou don't know what day of the week it is. You meet an islander and ask, “Is it Saturday?” They respond “Yes.”\nWhat type must the islander be?",
+         "difficulty":"E",
+         "answers":[
+            "Sknight",
+            "Sknave",
+            "Both",
+            "Impossible"
+         ],
+         "correct":1,
+         "explanation":"Suppose it is Friday (or some day other than Saturday).\nIf you ask a sknight if it is Saturday, they truthfully say 'no.' If you ask a sknave, they lie and say 'yes.'\n\nSuppose it is Saturday.\nIf you ask a sknight if it is Saturday, they lie and say 'no.' If you ask a sknave, they truthfully say 'yes.'\n\nSo either way, a 'yes' response indicates a sknave, even though you don't know what day it is!"
+      },
+      {
+         "text":"There are two men. One of them is wearing a red shirt, and the other is wearing a blue shirt. The two men are named Andrew and Bob, but we do not know which is Andrew and which is Bob.\nThe guy in the blue shirt says, “I am Andrew.”\nThe guy in the red shirt says, “I am Bob.”\nIf we know that at least one of them lied, then what color shirt is Andrew wearing?",
+         "difficulty":"M",
+         "answers":[
+            "Blue",
+            "Red",
+            "Both",
+            "Neither"
+         ],
+         "correct":1,
+         "explanation":"It's impossible for only one of them to be lying, because that would entail that they both have the same name, which we know isn't the case.\nSince we know that at least one of them lied, we deduce that both must be lying, which means we have to swap the names we are given: Bob wears a blue shirt and Andrew wears a red shirt.\nThe latter statement is the answer to the problem. That is, Bob is the one wearing the red shirt."
+      },
+      {
+         "text":"There are three boxes, but only one of them has gold inside. Additionally, each box has a message printed on it. One of these messages is true and the other two are lies.\nThe first box says, “The gold is not here.”\nThe second box says, “The gold is not here.”\nThe third box says, “The gold is in the second box.”\nWhich box contains the gold?",
+         "difficulty":"M",
+         "answers":[
+            "First",
+            "Second",
+            "Third",
+            "Impossible"
+         ],
+         "correct":0,
+         "explanation":"If we assume that the gold is in the first box, then we see the following sequence for the dialogues:\nFalse, True, False. This sequence agrees with the condition of one truth and two lies, but we'll look at the other possibilities for completeness.\n\nIf we assume that the gold is in the second box the sequence will be,\nTrue, False, True. But this is not possible given that we were told two statements are false.\n\nIf we assume that the gold is in the third box the sequence will be,\nTrue, True, False. Again, this set of answers is not possible because two answers are true.\n\nThe conditions are met only for the first scenario, which implies that the first box has the gold in it."
+      },
+      {
+         "text":"John tells the truth on Mondays, Thursdays, and Saturdays, but lies on all the other days of the week.\nOne day he said, “I will tell the truth tomorrow.”\nOn which day of the week did he make this statement?",
+         "difficulty":"H",
+         "answers":[
+            "Sunday",
+            "Monday",
+            "Tuesday",
+            "Wednesday"
+         ],
+         "correct":2,
+         "explanation":"Is he telling the truth? If yes then it is Monday, Thursday, or Friday. But then he must then be telling the truth on the following day. This is a contradiction because none of the days or consecutive.\nTherefore, he must be lying. Which means it is Tuesday, Wednesday, Friday, or Saturday. But if this statement is a lie then he must be lying on the following day. Because the only consecutive lying days are Tuesday and Wednesday, it must the former.\nIt is Tuesday."
+      }
+   ]
+}

@@ -1,0 +1,309 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://Assets/Fonts/Titillium-Regular.otf" type="DynamicFontData" id=1]
+[ext_resource path="res://Screens/Play Screens/Play Screen Manager.gd" type="Script" id=2]
+[ext_resource path="res://Assets/Styleboxes/TransparentWithTransparentBorder.tres" type="StyleBox" id=3]
+[ext_resource path="res://Assets/Styleboxes/TransparentWithBorder.tres" type="StyleBox" id=4]
+[ext_resource path="res://Screens/Play Screens/Typing Game/Typing Game.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Screens/Play Screens/Maze Game/Maze Game.tscn" type="PackedScene" id=6]
+
+[sub_resource type="DynamicFont" id=1]
+size = 24
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 20
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 32
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 20
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 20
+font_data = ExtResource( 1 )
+
+[sub_resource type="ButtonGroup" id=7]
+
+[node name="PlayControl" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 0.840881
+margin_right = 0.84082
+rect_pivot_offset = Vector2( -287.659, -89.4056 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+typing_game_scene = ExtResource( 5 )
+maze_game_scene = ExtResource( 6 )
+
+[node name="Cover" type="ColorRect" parent="."]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_top = -600.0
+margin_right = 300.0
+color = Color( 0.184314, 0.184314, 0.184314, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Cover2" type="ColorRect" parent="."]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -289.0
+margin_right = 6.10352e-05
+margin_bottom = 600.0
+color = Color( 0.184314, 0.184314, 0.184314, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Cover3" type="ColorRect" parent="."]
+anchor_right = 1.0
+margin_right = 6.10352e-05
+margin_bottom = 178.0
+color = Color( 0.184314, 0.184314, 0.184314, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="WorldSectionLabel" type="Label" parent="."]
+anchor_right = 1.0
+margin_right = 6.10352e-05
+margin_bottom = 41.0
+custom_fonts/font = SubResource( 1 )
+text = "World - Section"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ByLabel" type="Label" parent="."]
+anchor_right = 1.0
+margin_top = 34.0
+margin_right = 6.10352e-05
+margin_bottom = 76.0
+custom_fonts/font = SubResource( 1 )
+text = "By: name"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CurLevelLabel" type="Label" parent="."]
+margin_left = 19.9898
+margin_top = 52.5592
+margin_right = 384.99
+margin_bottom = 70.5592
+custom_fonts/font = SubResource( 2 )
+text = "Level 1 / 10"
+valign = 1
+autowrap = true
+clip_text = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ScoreLabel" type="Label" parent="."]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -275.0
+margin_top = 77.0
+margin_bottom = 122.0
+custom_fonts/font = SubResource( 1 )
+text = "Score: 0"
+valign = 1
+autowrap = true
+clip_text = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TimerLabel" type="Label" parent="."]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -275.0
+margin_top = 122.0
+margin_bottom = 167.0
+custom_fonts/font = SubResource( 1 )
+text = "Timer: 999"
+valign = 1
+autowrap = true
+clip_text = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Timer" type="Timer" parent="TimerLabel"]
+autostart = true
+
+[node name="ExplanationScroll" type="ScrollContainer" parent="."]
+visible = false
+margin_left = 306.0
+margin_top = 180.0
+margin_right = 733.0
+margin_bottom = 597.0
+scroll_horizontal_enabled = false
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="ExplanationLabel" type="Label" parent="ExplanationScroll"]
+margin_right = 427.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 300, 0 )
+size_flags_horizontal = 3
+custom_fonts/font = SubResource( 3 )
+text = "Explanation"
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ContinueButton" type="Button" parent="."]
+visible = false
+margin_left = 765.326
+margin_top = 515.339
+margin_right = 1004.33
+margin_bottom = 591.339
+custom_fonts/font = SubResource( 4 )
+text = "Continue"
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="QuestionLabel" type="Label" parent="."]
+anchor_right = 1.0
+margin_top = 79.0
+margin_right = 6.10352e-05
+margin_bottom = 170.0
+custom_fonts/font = SubResource( 5 )
+text = "Question
+Text
+Here
+Example"
+autowrap = true
+clip_text = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_left = 0.0013811
+anchor_top = 1.0
+anchor_right = 0.0013811
+anchor_bottom = 1.0
+margin_left = -0.414246
+margin_top = -422.0
+margin_right = 288.586
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Answer1Checkbox" type="CheckBox" parent="VBoxContainer"]
+margin_right = 289.0
+margin_bottom = 22.0
+custom_styles/hover = ExtResource( 4 )
+custom_styles/pressed = ExtResource( 4 )
+custom_styles/focus = ExtResource( 4 )
+custom_styles/disabled = ExtResource( 3 )
+custom_styles/normal = ExtResource( 3 )
+custom_fonts/font = SubResource( 6 )
+custom_colors/font_color_disabled = Color( 1, 1, 1, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+disabled = true
+group = SubResource( 7 )
+text = "Answer1"
+clip_text = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Answer2Checkbox" type="CheckBox" parent="VBoxContainer"]
+margin_top = 26.0
+margin_right = 289.0
+margin_bottom = 48.0
+custom_styles/hover = ExtResource( 4 )
+custom_styles/pressed = ExtResource( 4 )
+custom_styles/focus = ExtResource( 4 )
+custom_styles/disabled = ExtResource( 3 )
+custom_styles/normal = ExtResource( 3 )
+custom_fonts/font = SubResource( 6 )
+custom_colors/font_color_disabled = Color( 1, 1, 1, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+disabled = true
+group = SubResource( 7 )
+text = "Answer2"
+clip_text = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Answer3Checkbox" type="CheckBox" parent="VBoxContainer"]
+margin_top = 52.0
+margin_right = 289.0
+margin_bottom = 74.0
+custom_styles/hover = ExtResource( 4 )
+custom_styles/pressed = ExtResource( 4 )
+custom_styles/focus = ExtResource( 4 )
+custom_styles/disabled = ExtResource( 3 )
+custom_styles/normal = ExtResource( 3 )
+custom_fonts/font = SubResource( 6 )
+custom_colors/font_color_disabled = Color( 1, 1, 1, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+disabled = true
+group = SubResource( 7 )
+text = "Answer3"
+clip_text = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Answer4Checkbox" type="CheckBox" parent="VBoxContainer"]
+margin_top = 78.0
+margin_right = 289.0
+margin_bottom = 100.0
+custom_styles/hover = ExtResource( 4 )
+custom_styles/pressed = ExtResource( 4 )
+custom_styles/focus = ExtResource( 4 )
+custom_styles/disabled = ExtResource( 3 )
+custom_styles/normal = ExtResource( 3 )
+custom_fonts/font = SubResource( 6 )
+custom_colors/font_color_disabled = Color( 1, 1, 1, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+disabled = true
+group = SubResource( 7 )
+text = "Answer4"
+clip_text = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DEBUG Game Area" type="ColorRect" parent="."]
+visible = false
+margin_left = 300.0
+margin_top = 178.0
+margin_right = 735.0
+margin_bottom = 600.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="timeout" from="TimerLabel/Timer" to="." method="_on_Timer_timeout"]
+[connection signal="pressed" from="ContinueButton" to="." method="_on_ContinueButton_pressed"]
